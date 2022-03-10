@@ -1,0 +1,97 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Very-light-gray: hsl(0, 0%, 95%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75)
+}
+body {
+    background-color: var(--Very-light-gray);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    scroll-behavior: smooth;
+    font-size: 15px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    overflow: hidden;
+}
+main h2 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px 0;
+    padding-top: 20px;
+}
+main p {
+    color: var(--Transparent-white);
+    line-height: 1.6em;
+    padding: 20px 0;
+}
+main button {
+padding: 1em 2em;
+font-size: 1em;
+background-color: var(--Very-light-gray);
+border-radius: 2em;
+border: none;
+transition: 0.3s;
+cursor: pointer;
+}
+main .sedans button {
+    color: var(--Bright-orange);
+}
+main .suvs button {
+color: var(--Dark-cyan);
+}
+main .luxury button {
+color: var(--Very-dark-cyan);
+}
+main .sedans button:hover,
+main .suvs button:hover,
+main .luxury button:hover
+ {
+    background-color: inherit;
+    outline: 2px solid var(--Transparent-white);
+    color: white;
+}
+section {
+    padding: 3em;
+    width: 90%;
+}
+main .sedans {
+background-color: var(--Bright-orange);
+}
+main .suvs {
+background-color: var(--Dark-cyan);
+}
+main .luxury {
+background-color: var(--Very-dark-cyan);
+}
+
+@media (min-width:767px) {
+  .container {
+        flex-direction: row;
+        margin: 3rem auto;
+        max-height: 100vh;
+        align-items: center;
+        justify-content:center;
+        max-width: 890px;
+        height: 500px;        
+    }
+    .container section {
+        flex-basis: calc(100% /3);
+    }
+    main button {
+        margin-top: 4rem;
+    }
+}
